@@ -9,12 +9,13 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 20px;
+  padding: 15px 30px;
   background-color: #ffcc00;
   color: #333;
   font-size: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header .donate-btn {
@@ -126,4 +127,25 @@ footer {
 
 #donate-btn:hover {
   background-color: #0056b3;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 1px;
 }

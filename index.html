@@ -9,7 +9,11 @@
   <body>
     <header>
       <div class="logo">
-        <img src=".jpg" alt="Namaskaram Logo" class="logo-img" />
+        <img
+          src="images/om_2448613.png"
+          alt="Namaskaram Logo"
+          class="logo-img"
+        />
         <span class="logo-text">Namaskaram</span>
       </div>
     </header>
@@ -53,6 +57,18 @@
             <p>₹3,00,000</p>
             <button data-amount="6000">Select</button>
           </div>
+          <!-- Custom donation amount option -->
+          <div class="option custom-donation">
+            <p>Custom Amount</p>
+
+            <input
+              type="number"
+              placeholder="Enter amount in ₹"
+              min="100"
+              class="custom-amount-input"
+            />
+            <button data-amount="custom">Select</button>
+          </div>
           <!-- Add more options as needed -->
         </div>
       </div>
@@ -61,54 +77,29 @@
         <h1>Kumbh Mela Annadaan</h1>
         <div class="donation-options">
           <div class="option">
-            <p>Feed 50 Pilgrims</p>
+            <p>Feed 10 Pilgrims</p>
             <p>₹2500</p>
             <button data-amount="2500">Select</button>
           </div>
           <div class="option">
-            <p>Feed 100 Pilgrims</p>
+            <p>Feed 50 Pilgrims</p>
             <p>₹5000</p>
             <button data-amount="5000">Select</button>
           </div>
-          <!-- Add more options as needed -->
+          <div class="option">
+            <p>Feed 100 Pilgrims</p>
+            <p>₹8000</p>
+            <button data-amount="5000">Select</button>
+          </div>
+          <!-- Custom donation amount option -->
         </div>
+        <!-- Add more options as needed -->
       </div>
+
       <div class="donate-container" id="donate-section">
         <button id="donate-btn">Donate</button>
       </div>
     </main>
   </body>
+  <script src="script.js"></script>
 </html>
-
-<script>
-  const selectedAmounts = new Set();
-
-  // Toggle selected class and manage selected amounts
-  document.querySelectorAll(".option button").forEach((button) => {
-    button.addEventListener("click", () => {
-      button.classList.toggle("selected");
-      const amount = button.getAttribute("data-amount");
-      if (button.classList.contains("selected")) {
-        selectedAmounts.add(amount);
-      } else {
-        selectedAmounts.delete(amount);
-      }
-    });
-  });
-
-  // Redirect to payment gateway on Donate button click
-  document.getElementById("donate-btn").addEventListener("click", () => {
-    if (selectedAmounts.size === 0) {
-      alert("Please select at least one donation option.");
-      return;
-    }
-
-    const totalAmount = Array.from(selectedAmounts).reduce(
-      (sum, amt) => sum + parseInt(amt),
-      0
-    );
-    // Replace with the actual payment gateway URL
-    const paymentUrl = `https://payment-gateway.example.com?amount=${totalAmount}`;
-    window.location.href = paymentUrl;
-  });
-</script>
