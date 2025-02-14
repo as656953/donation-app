@@ -670,3 +670,42 @@ body {
     justify-content: center;
   }
 }
+
+.qr-section {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.qr-section h2 {
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: fit-content;
+}
+
+.qr-code img {
+  width: 300px; /* Increased from 200px */
+  height: 300px; /* Increased from 200px */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Add hover effect for better visual feedback */
+.qr-code:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}

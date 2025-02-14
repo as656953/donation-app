@@ -92,6 +92,7 @@ document.getElementById("donate-btn").addEventListener("click", () => {
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
       </head>
       <body>
         <header>
@@ -151,14 +152,14 @@ document.getElementById("donate-btn").addEventListener("click", () => {
                       upiUrl
                     )}" 
                          alt="Payment QR Code">
-                    <p class="scan-instruction">Scan with any UPI app</p>
+                    
                   </div>
                 </div>
               </div>
               
               <div class="payment-footer">
                 <div class="security-badges">
-                  <div class="badge"><i class="fas fa-shield-alt"></i> Secure Payment</div>
+                  <div class="badge"><i class="fas fa-shield-halved"></i> Secure Payment</div>
                   <div class="badge"><i class="fas fa-check-circle"></i> Verified NGO</div>
                   <div class="badge"><i class="fas fa-clock"></i> 24/7 Support</div>
                 </div>
