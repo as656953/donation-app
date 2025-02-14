@@ -175,7 +175,7 @@ document.getElementById("donate-btn").addEventListener("click", () => {
         
         <footer class="payment-page-footer">
           <p>© 2024 Namaskaram. All rights reserved.</p>
-          <p>For support, contact: support@namaskaram.org</p>
+          <p>For support, contact: sahayam.namaskaram@gmail.com</p>
         </footer>
       </body>
       </html>
